@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>ReciSpot</title>
+</head>
+<body>
+    <div>
+        <div>
+
+            <h1>ReciSpot Login</h1>
+
+            <div>
+                <div></div>
+                {% if error_message %}
+                {{error_message}}
+                {% endif %}
+                <img class="background-collage" src="{% static 'images/recipe-collage-4.jpg' %}" alt="login-pic">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{form}}
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

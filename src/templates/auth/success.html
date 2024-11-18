@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>ReciSpot</title>
+</head>
+<body>
+    <div>
+        <div>
+
+            <h1>Logout Successful</h1>
+            <a href="{%url 'login' %}"><button>Click Here to Log in</button></a>
+        </div>
+    </div>
+</body>
+</html>

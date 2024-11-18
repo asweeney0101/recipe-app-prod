@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>ReciSpot</title>
+</head>
+<body>
+    <div class="nav-bar-ajs">
+        <a href="{% url 'recipes:home' %}">
+            <div class="logo-div">
+                <img class="logo" src="{% static 'images/chef-hat.svg' %}" alt="logo">
+                <h1> ReciSpot</h1>
+            </div>
+        </a>
+
+        <a class="logout-button" href="{%url 'logout' %}">
+            <h3>Logout</h3>
+        </a>
+    </div>
+
+    <div class="all-recipe-collage-div">
+        <h1>ReciSpot: All Recipes</h1>
+        <img class="background-collage2" src="{% static 'images/recipe-collage5.png' %}" alt="home">
+    </div>
+
+
+    <div class="search-add-div">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <button class="search-btn" type="submit">Search</button>
+        </form>
+        <button class="add-recipe-btn">
+            <a href="{% url 'recipes:recipe_add' %}" class="btn btn-primary add-recipe-btn">
+                <span class="plus-sign">+</span> Add a Recipe
+            </a>
+        </button>
+    </div>
+
+
+
+    <div class="all-recipes-div">
+        {% for recipe in recipes %}
+        <div class="recipe-div">
+            <a href="{% url 'recipes:recipe_detail' recipe.id %}">
+                <h3>{{ recipe.name }}</h3>
+                <img class="recipe-img" src="{{ recipe.pic.url }}" alt="{{ recipe.name }}">
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

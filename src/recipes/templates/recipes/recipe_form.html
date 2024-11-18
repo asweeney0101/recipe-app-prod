@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>Add Recipe</title>
+</head>
+<body>
+    <div class="nav-bar-ajs">
+        <a href="{% url 'recipes:home' %}">
+            <div class="logo-div">
+                <img class="logo" src="{% static 'images/chef-hat.svg' %}" alt="logo">
+                <h1> ReciSpot</h1>
+            </div>
+        </a>
+        <a class="logout-button" href="{%url 'logout' %}">
+            <h3>Logout</h3>
+        </a>
+    </div>
+    <h1>Add a New Recipe</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Recipe</button>
+    </form>
+</body>
+</html>

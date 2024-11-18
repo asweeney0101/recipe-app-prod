@@ -1,0 +1,151 @@
+:root {
+  --background-nav-color: rgb(175, 225, 255);
+}
+
+body {
+  text-align: center;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+span {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  color: inherit;
+}
+
+a:hover {
+  opacity: 65%;
+}
+
+button:hover {
+  opacity: 65%;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.nav-bar-ajs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-nav-color);
+  height: 4rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.logo-div {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  width: 3rem;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+/* home page */
+
+.background-collage {
+  max-width: 90%;
+}
+
+.view-recipes {
+  margin-top: 4rem;
+}
+
+/* all recipes page */
+
+.all-recipe-collage-div {
+  position: relative;
+  text-align: center;
+}
+
+.all-recipe-collage-div h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: -1px -1px 0 var(--background-nav-color),
+    1px -1px 0 var(--background-nav-color),
+    -1px 1px 0 var(--background-nav-color),
+    1px 1px 0 var(--background-nav-color);
+}
+
+.background-collage2 {
+  max-width: 90%;
+}
+
+.search-add-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 7.5%;
+}
+
+.add-recipe-btn {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-nav-color);
+  padding: 0.05rem 0.175rem;
+  border-radius: 0.25rem;
+  border-width: 1px;
+}
+
+.search-btn {
+  background-color: var(--background-nav-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border-width: 1px;
+}
+
+.plus-sign {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.all-recipes-div {
+  padding-right: 20%;
+  padding-left: 20%;
+}
+
+.recipe-div {
+  margin-bottom: 4rem;
+}
+
+.recipe-img {
+  max-width: 100%;
+  margin: auto;
+}
