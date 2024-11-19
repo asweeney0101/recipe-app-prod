@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://git.heroku.com/blooming-forest-25720.git']
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
